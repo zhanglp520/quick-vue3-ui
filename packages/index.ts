@@ -7,7 +7,7 @@ const install = (Vue: any) => {
 };
 
 export default {
-  version: "1.0.2",
+  version: "1.0.3",
   install,
-  ...[components],
+  ...components,
 };
