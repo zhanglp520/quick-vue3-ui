@@ -1,4 +1,5 @@
 import Button from "./components/button/button.vue";
+import pack from "../package.json";
 const components = [Button];
 const install = (Vue: any) => {
   components.forEach((component) => {
@@ -7,7 +8,7 @@ const install = (Vue: any) => {
 };
 
 export default {
-  version: "1.0.3",
+  version: pack.version,
   install,
-  ...components,
+  Button,
 };
