@@ -1,7 +1,7 @@
 {
   "name": "quick-vue3-ui",
   "private": false,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/quick-vue3-ui.umd.js",
   "module": "dist/quick-vue3-ui.es.js",
   "types": "quick-vue3-ui.d.ts",
