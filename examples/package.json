@@ -1,0 +1,11 @@
+{
+  "name": "@ainiteam/examples",
+  "version": "1.0.0",
+  "description": "examples",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "zhanglp",
+  "license": "ISC"
+}
