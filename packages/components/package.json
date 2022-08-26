@@ -2,6 +2,7 @@
   "name": "@ainiteam/quick-vue3-ui",
   "version": "1.0.1",
   "description": "@ainiteam/quick-vue3-ui",
+  "private": false,
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
@@ -17,7 +18,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [
     "quick-vue3-ui",
@@ -26,11 +28,31 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": "v16.13.1",
+    "pnpm": "6.32.9"
+  },
+  "type": "module",
+  "workspaces": [
+    "packages/**",
+    "examples"
+  ],
+  "author": {
+    "name": "zhanglp",
+    "email": "zhanglp15229380174@163.com",
+    "url": "https://gitee.com/zhanglp520/quick-vue3-admin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/zhanglp520/quick-vue3-admin"
+  },
   "browserslist": [
     "> 1%",
     "not ie 11",
     "not op_mini all"
   ],
-  "author": "zhanglp",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ainiteam/utils": "workspace:^1.0.1"
+  }
 }
