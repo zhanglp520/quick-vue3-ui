@@ -1,29 +1,31 @@
-import { ExtractPropTypes } from "vue";
+import { ExtractPropTypes } from 'vue'
+import { Toolbar } from '#/index'
 
+export type { Toolbar }
 export const toolbarProps = {
   addButtonName: {
     type: String,
-    default: "新增",
+    default: '新增',
   },
   batchDeleteButtonName: {
     type: String,
-    default: "批量删除",
+    default: '批量删除',
   },
   importButtonName: {
     type: String,
-    default: "导入",
+    default: '导入',
   },
   exportButtonName: {
     type: String,
-    default: "导出",
+    default: '导出',
   },
   printtButtonName: {
     type: String,
-    default: "打印",
+    default: '打印',
   },
   refreshButtonName: {
     type: String,
-    default: "刷新",
+    default: '刷新',
   },
   hiddenAddButton: {
     type: Boolean,
@@ -53,41 +55,16 @@ export const toolbarProps = {
     type: [Boolean, Object],
     default: false,
   },
-};
+}
 
 export const toolbarEmits = [
-  "onAdd",
-  "onBatchDelete",
-  "onImport",
-  "onExport",
-  "onPrint",
-  "onRefresh",
-  "onCustomToolbarClick",
-];
-export interface Btns {
-  name: string
-  link?: boolean
-  type?: string
-  size?: string
-  hidden?: boolean
-  position?: string
-  click(item?: any, done?: any): void
-  render?(row: any): boolean
-}
-export interface Toolbar {
-  importButtonName?: string
-  exportButtonName?: string
-  addButtonName?: string
-  batchDeleteButtonName?: string
-  printButtonName?: string
-  refreshButtonName?: string
-  hiddenImportButton?: boolean
-  hiddenExportButton?: boolean
-  hiddenAddButton?: boolean
-  hiddenBatchDeleteButton?: boolean
-  hiddenPrintButton?: boolean
-  hiddenRefreshButton?: boolean
-  btns?: Array<Btns>
-}
-export type ToolbarProps = ExtractPropTypes<typeof toolbarProps>;
-export type ToolbarEmits = ExtractPropTypes<typeof toolbarEmits>;
+  'onAdd',
+  'onBatchDelete',
+  'onImport',
+  'onExport',
+  'onPrint',
+  'onRefresh',
+  'onCustomToolbarClick',
+]
+export type ToolbarProps = ExtractPropTypes<typeof toolbarProps>
+export type ToolbarEmits = ExtractPropTypes<typeof toolbarEmits>

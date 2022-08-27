@@ -1,24 +1,30 @@
 ## 介绍
 
-路径位于 src/types/option.ts
+路径位于组件库包 components/types/option.ts
 
 ## Option
 
-| 属性名称 | 类型          | 是否可空 | 参数 |
-| :------- | :------------ | :------- | :--- |
-| label    | string        | ?        | -    |
-| value    | string/number | ?        | -    |
+```ts
+export interface Options {
+  label?: string
+  value?: string | number
+}
+```
 
 ## TreeOption
 
-| 属性名称 | 类型         | 是否可空 | 参数 |
-| :------- | :----------- | :------- | :--- |
-| id       | string       | ?        | -    |
-| label    | string       | ?        | -    |
-| children | TreeOption[] | ?        | -    |
+```ts
+export interface TreeOptions {
+  id?: string
+  label?: string
+  children?: string
+}
+```
 
 ## SelectTreeOption
 
-| 属性名称 | 类型               | 是否可空 | 参数 |
-| :------- | :----------------- | :------- | :--- |
-| children | SelectTreeOption[] | ?        | -    |
+```ts
+export interface SelectTreeOptions extends Options {
+  children?: string
+}
+```

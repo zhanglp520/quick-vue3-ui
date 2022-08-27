@@ -1,7 +1,7 @@
 import pack from './package.json'
-import * as components from "./src/index";
+import * as components from "@/index";
 
-export * from "./src/index";
+export * from "@/index";
 
 const install = (app: any) => {
   for (const comkey in components) {

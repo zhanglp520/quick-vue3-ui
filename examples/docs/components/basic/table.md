@@ -1,13 +1,17 @@
+<script setup>
+import Table from "../../../src/views/table/index.vue";
+</script>
+
 ## 示例
 
-[请在这里查看](https://template.ainiteam.com/#/components/table)
+<Table></Table>
 
 ## 属性
 
 | 属性名             | 描述                 | 类型              | 默认值 | 可选值 |
 | :----------------- | :------------------- | :---------------- | :----- | :----- |
 | data               | 表格数据             | Array             | -      | -      |
-| columns            | 表格列集合           | Array<Column>     | -      | -      |
+| columns            | 表格列集合           | Column[]          | -      | -      |
 | height             | 表格自定义高度       | Boolean/Number    | false  | -      |
 | rowKey             | 行 key               | String            | form   | -      |
 | loading            | 显示加载图标         | Boolean           | false  | -      |

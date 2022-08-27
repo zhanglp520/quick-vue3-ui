@@ -1,44 +1,48 @@
 <script lang="ts" setup>
-import { reactive, onMounted } from "vue";
-import baseDefault from "./baseDefault.vue";
-import updateButtonName from "./updateButtonName.vue";
-import hiddenButton from "./hiddenButton.vue";
-import customButton from "./customButton.vue";
-import actionSlot from "./actionSlot.vue";
-import QuickCode from "../../components/QuickCode/index.vue";
+import { reactive, onMounted } from 'vue'
+import QuickCode from '../../components/QuickCode/index.vue'
+import baseDefault from './baseDefault.vue'
+import updateButtonName from './updateButtonName.vue'
+import hiddenButton from './hiddenButton.vue'
+import customButton from './customButton.vue'
+import actionSlot from './actionSlot.vue'
 
 const form = reactive({
-  defaultCode: "",
-  updateButtonNameCode: "",
-  customButtonCode: "",
-  hiddenButtonCode: "",
-  actionSlotCode: "",
-});
+  defaultCode: '',
+  updateButtonNameCode: '',
+  customButtonCode: '',
+  hiddenButtonCode: '',
+  actionSlotCode: '',
+})
 const getSourceCode = async () => {
-  const baseDefault = await import(/* @vite-ignore */ `./baseDefault.vue?raw`);
-  form.defaultCode = baseDefault.default;
+  const baseDefaultResult = await import(
+    /* @vite-ignore */ `./baseDefault.vue?raw`
+  )
+  form.defaultCode = baseDefaultResult.default
 
-  const updateButtonName = await import(
+  const updateButtonNameResult = await import(
     /* @vite-ignore */ `./updateButtonName.vue?raw`
-  );
-  form.updateButtonNameCode = updateButtonName.default;
+  )
+  form.updateButtonNameCode = updateButtonNameResult.default
 
-  const hiddenButton = await import(
+  const hiddenButtonResult = await import(
     /* @vite-ignore */ `./hiddenButton.vue?raw`
-  );
-  form.hiddenButtonCode = hiddenButton.default;
+  )
+  form.hiddenButtonCode = hiddenButtonResult.default
 
-  const customButton = await import(
+  const customButtonResult = await import(
     /* @vite-ignore */ `./customButton.vue?raw`
-  );
-  form.customButtonCode = customButton.default;
+  )
+  form.customButtonCode = customButtonResult.default
 
-  const actionSlot = await import(/* @vite-ignore */ `./actionSlot.vue?raw`);
-  form.actionSlotCode = actionSlot.default;
-};
+  const actionSlotResult = await import(
+    /* @vite-ignore */ `./actionSlot.vue?raw`
+  )
+  form.actionSlotCode = actionSlotResult.default
+}
 onMounted(() => {
-  getSourceCode();
-});
+  getSourceCode()
+})
 </script>
 <template>
   <div class="component-demo">

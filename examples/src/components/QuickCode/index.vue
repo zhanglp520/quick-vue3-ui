@@ -23,7 +23,7 @@ const { code, language, autodetect } = toRefs(props) as {
 </script>
 <template>
   <!-- :language="language" -->
-  <el-collapse style="margin-top:20px;">
+  <el-collapse style="margin-top: 20px">
     <el-collapse-item title="查看源码">
       <highlightjs :autodetect="autodetect" :code="code" />
     </el-collapse-item>

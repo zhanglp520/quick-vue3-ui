@@ -1,25 +1,25 @@
 <script lang="ts" setup>
 const handleAdd = () => {
-  console.log("handleAdd");
-};
+  console.log('handleAdd')
+}
 const handleBatchDelete = () => {
-  console.log("handleBatchDelete");
-};
+  console.log('handleBatchDelete')
+}
 const handleImport = () => {
-  console.log("handleImport");
-};
+  console.log('handleImport')
+}
 const handleExport = () => {
-  console.log("handleExport");
-};
+  console.log('handleExport')
+}
 const handlePrint = () => {
-  console.log("handlePrint");
-};
+  console.log('handlePrint')
+}
 const handleRefresh = () => {
-  console.log("handleRefresh");
-};
+  console.log('handleRefresh')
+}
 const handleCustomBtn = () => {
-  console.log("handleCustomBtn");
-};
+  console.log('handleCustomBtn')
+}
 </script>
 <template>
   <el-row :guster="20">
@@ -58,7 +58,7 @@ const handleCustomBtn = () => {
   </el-row>
 </template>
 <style>
-.el-row{
+.el-row {
   margin-bottom: 20px;
 }
 </style>

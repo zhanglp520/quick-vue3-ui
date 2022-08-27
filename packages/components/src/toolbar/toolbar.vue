@@ -1,8 +1,8 @@
 <script lang="ts" setup name="QuickToolbar">
-import { defineProps, defineEmits, toRefs } from "vue";
-import {  toolbarProps,toolbarEmits,Toolbar } from "./types";
+import { defineProps, defineEmits, toRefs } from 'vue'
+import { toolbarProps, toolbarEmits, Toolbar } from './types'
 
-const props = defineProps(toolbarProps);
+const props = defineProps(toolbarProps)
 const {
   addButtonName,
   batchDeleteButtonName,
@@ -18,7 +18,7 @@ const {
   hiddenRefreshButton,
   tableToolbar,
 } = toRefs(props)
-const emits = defineEmits(toolbarEmits);
+const emits = defineEmits(toolbarEmits)
 const toolbar = tableToolbar.value as Toolbar
 const handleCustomClick = (item: any) => {
   emits('onCustomToolbarClick', item.click)

@@ -1,31 +1,31 @@
 <script lang="ts" setup>
 const handleAdd = () => {
-  console.log("handleAdd");
-};
+  console.log('handleAdd')
+}
 const handleBatchDelete = () => {
-  console.log("handleBatchDelete");
-};
+  console.log('handleBatchDelete')
+}
 const handleImport = () => {
-  console.log("handleImport");
-};
+  console.log('handleImport')
+}
 const handleExport = () => {
-  console.log("handleExport");
-};
+  console.log('handleExport')
+}
 const handlePrint = () => {
-  console.log("handlePrint");
-};
+  console.log('handlePrint')
+}
 const handleRefresh = () => {
-  console.log("handleRefresh");
-};
+  console.log('handleRefresh')
+}
 </script>
 <template>
   <quick-toolbar
-      :table-toolbar="true"
-      @on-add="handleAdd"
-      @on-batch-delete="handleBatchDelete"
-      @on-import="handleImport"
-      @on-export="handleExport"
-      @on-print="handlePrint"
-      @on-refresh="handleRefresh"
-    ></quick-toolbar>
+    :table-toolbar="true"
+    @on-add="handleAdd"
+    @on-batch-delete="handleBatchDelete"
+    @on-import="handleImport"
+    @on-export="handleExport"
+    @on-print="handlePrint"
+    @on-refresh="handleRefresh"
+  ></quick-toolbar>
 </template>

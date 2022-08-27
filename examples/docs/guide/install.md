@@ -180,7 +180,7 @@ console.log('baseURL:', baseURL)
 #### 错误：
 
 ::: danger 错误信息
-ts文件提示找不到模块“.vue”或其相应的类型声明
+ts 文件提示找不到模块“.vue”或其相应的类型声明
 :::
 解决方案:
 
@@ -193,9 +193,10 @@ declare module '*.vue' {
   export default component
 }
 ```
-如果自定义了xx.d.ts 使用方案2即可
 
-解决方案2:
+如果自定义了 xx.d.ts 使用方案 2 即可
+
+解决方案 2:
 
 ```ts
 //tsconfig.json
@@ -1150,7 +1151,7 @@ git add //++
 
 gitee 流水线中增加流水线及配置流水线，配置完后产生的配置文件如下：
 
-```yml
+```yaml
 // .workflow/master-pipeline.yml
 version: '1.0'
 name: master-line

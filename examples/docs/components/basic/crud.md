@@ -1,23 +1,27 @@
+<script setup>
+import crud from "../../../src/views/crud/index.vue";
+</script>
+
 ## 示例
 
-[请在这里查看](https://template.ainiteam.com/#/components/crud)
+<crud></crud>
 
 ## 属性
 
 | 属性名          | 描述           | 类型              | 默认值 | 可选值 |
 | :-------------- | :------------- | :---------------- | :----- | :----- |
 | searchFormModel | 搜索表单 model | Boolean/Object    | -      | -      |
-| searchFormItems | 搜索表单项集合 | Array<FormItem>   | -      | -      |
+| searchFormItems | 搜索表单项集合 | FormItem[]        | -      | -      |
 | leftTree        | 启用左树       | Boolean/Object    | false  | -      |
 | leftTreeRefresh | 是否刷新左树   | Boolean           | false  | -      |
 | tableData       | 表格数据       | Array             | -      | -      |
-| tableColumns    | 表格列集合     | Array<Column>     | -      | -      |
+| tableColumns    | 表格列集合     | Column[]          | -      | -      |
 | tableActionbar  | 表格操作栏     | Boolean/Actionbar | false  | -      |
 | tableToolbar    | 工具栏         | Boolean/Toolbar   | false  | -      |
 | page            | 分页           | Boolean/Page      | false  | -      |
 | dialogTitle     | 弹窗标题       | Boolean/Object    | false  | -      |
 | formModel       | 表单 model     | Object            | false  | -      |
-| formItems       | 表单项集合     | Array<FormItem>   | false  | -      |
+| formItems       | 表单项集合     | FormItem[]        | false  | -      |
 | formInline      | 行内表单       | Boolean           | false  | -      |
 | loading         | 显示加载       | Boolean           | false  | -      |
 | height          | 自定义表格高度 | Boolean/Number    | false  | -      |

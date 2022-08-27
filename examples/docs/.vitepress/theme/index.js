@@ -3,15 +3,17 @@ import 'element-plus/dist/index.css'
 import quickVue3UI from '@ainiteam/quick-vue3-ui'
 // import DefaultTheme from 'vitepress/dist/client/theme-default'
 import DefaultTheme from 'vitepress/theme'
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
-import 'highlight.js/styles/atom-one-dark.css'
-import 'highlight.js/lib/common'
 
 // import hljs from "highlight.js";
 // import "highlight.js/styles/color-brewer.css";
 
 // import Layout from './Layout.vue'
 // import './custom.css'
+
+hljs.registerLanguage('javascript', javascript)
 
 export default {
   ...DefaultTheme,
@@ -28,9 +30,7 @@ export default {
     //     hljs.highlightBlock(block);
     //   });
     // });
-        app.use(hljsVuePlugin)
+    app.use(hljsVuePlugin)
   },
-  setup() {
-
-  }
+  setup() {},
 }
