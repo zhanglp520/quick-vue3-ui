@@ -7,7 +7,7 @@ export default {
   appearance: true,
   ignoreDeadLinks: true,
   lastUpdated: true,
-  outDir: '../public',
+  // outDir: '../public',
   cleanUrls: 'with-subfolders',
   head: [
     [
