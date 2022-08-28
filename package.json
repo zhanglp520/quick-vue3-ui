@@ -2,24 +2,74 @@
   "name": "ainiteam",
   "version": "1.0.0",
   "description": "ainiteam",
+  "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm -F @ainiteam/examples dev",
+    "build": "pnpm -F @ainiteam/examples build",
+    "lint": "pnpm -F @ainiteam/examples lint",
+    "lint-fix": "pnpm -F @ainiteam/examples lint-fix",
+    "dev:docs": "pnpm -F @ainiteam/examples docs:dev",
+    "build:docs": "pnpm -F @ainiteam/examples docs:build",
+    "serve:docs": "pnpm -F @ainiteam/examples docs:serve",
+    "build:utils": "pnpm -F @ainiteam/utils build",
+    "lint:utils": "pnpm -F @ainiteam/utils lint",
+    "lint-fix:utils": "pnpm -F @ainiteam/utils lint-fix",
+    "build:ui": "pnpm -F @ainiteam/quick-vue3-ui build",
+    "lint:ui": "pnpm -F @ainiteam/quick-vue3-ui lint",
+    "lint-fix:ui": "pnpm -F @ainiteam/quick-vue3-ui lint-fix",
+    "preinstall": "npx only-allow pnpm"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "quick-vue3-ui",
+    "quick-vue3--ui组件库"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "v16.13.1",
+    "pnpm": "6.32.9"
+  },
+  "workspaces": [
+    "packages/**",
+    "examples"
+  ],
+  "author": {
+    "name": "zhanglp",
+    "email": "zhanglp15229380174@163.com",
+    "url": "https://gitee.com/zhanglp520/quick-vue3-admin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/zhanglp520/quick-vue3-admin"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie 11",
+    "not op_mini all"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.6",
+    "element-plus": "^2.2.14"
+  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
     "@vitejs/plugin-vue": "^3.0.3",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.4.0",
+    "prettier": "^2.7.1",
     "sass": "^1.54.5",
     "typescript": "^4.7.4",
     "vite": "^3.0.9",
     "vite-plugin-dts": "^1.4.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue": "^3.2.36"
-  },
-  "dependencies": {
-    "@ainiteam/quick-vue3-ui": "workspace:^1.0.0",
-    "@ainiteam/utils": "workspace:^1.0.0",
-    "element-plus": "^2.2.14"
   }
 }

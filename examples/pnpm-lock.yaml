@@ -1,0 +1,15 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@ainiteam/quick-vue3-ui': ^1.0.1
+
+dependencies:
+  '@ainiteam/quick-vue3-ui': registry.npmmirror.com/@ainiteam/quick-vue3-ui/1.0.1
+
+packages:
+
+  registry.npmmirror.com/@ainiteam/quick-vue3-ui/1.0.1:
+    resolution: {integrity: sha512-jPwKikkv1QWYzML1ayyU0IDkzXRo4PQ2Mo3xrJS5Nwo/ljKWP6ZJL1HRfFHfqcuFi59ge8WCzgMxjd8cbpf5WQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@ainiteam/quick-vue3-ui/-/quick-vue3-ui-1.0.1.tgz}
+    name: '@ainiteam/quick-vue3-ui'
+    version: 1.0.1
+    dev: false
