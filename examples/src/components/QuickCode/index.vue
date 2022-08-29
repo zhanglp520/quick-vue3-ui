@@ -8,7 +8,7 @@ const props = defineProps({
   },
   language: {
     type: String,
-    default: '',
+    default: 'vue',
   },
   autodetect: {
     type: Boolean,
@@ -25,7 +25,7 @@ const { code, language, autodetect } = toRefs(props) as {
   <!-- :language="language" -->
   <el-collapse style="margin-top: 20px">
     <el-collapse-item title="查看源码">
-      <highlightjs :autodetect="autodetect" :code="code" />
+      <highlightjs :autodetect="autodetect" :code="code" language="xml" />
     </el-collapse-item>
   </el-collapse>
 </template>
