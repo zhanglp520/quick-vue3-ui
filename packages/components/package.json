@@ -1,6 +1,6 @@
 {
   "name": "@ainiteam/quick-vue3-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "@ainiteam/quick-vue3-ui",
   "private": false,
   "main": "./dist/index.umd.js",
@@ -12,6 +12,10 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/indx.umd.js"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "files": [

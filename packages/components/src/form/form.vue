@@ -3,6 +3,7 @@ import { defineExpose, defineProps, toRefs, defineEmits, ref } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
 import { FormInstance, TabsPaneContext } from 'element-plus'
 import { formProps, formEmits } from './types'
+import elementPlusIcons from './elementPlusIcons'
 
 const props = defineProps(formProps)
 const { model, formInline, formItems, formType, actionSlot, hiddenAction } =
@@ -17,10 +18,10 @@ const activeName = ref('element')
 const handleClick = (tab: TabsPaneContext, event: Event) => {
   console.log(tab, event)
 }
-// const selectIcon = (item: any, option: any) => {
-//   item.select(option.value)
-//   iconVisible.value = false
-// }
+const selectIcon = (item: any, option: any) => {
+  item.select(option.value)
+  iconVisible.value = false
+}
 const iconClick = () => {
   iconVisible.value = true
 }
@@ -212,8 +213,9 @@ defineExpose({ handleSubmit, handleClear })
               class="demo-tabs"
               @tab-click="handleClick"
             >
-              <!-- <el-tab-pane label="element官方" name="element">
-                <ul class="icon-list">
+              <el-tab-pane label="element官方" name="element">
+                111111111
+                <!-- <ul class="icon-list">
                   <li
                     v-for="(option, index) in elementPlusIcons"
                     :key="index"
@@ -229,14 +231,16 @@ defineExpose({ handleSubmit, handleClear })
                       </span>
                     </span>
                   </li>
-                </ul>
-              </el-tab-pane> -->
+                </ul> -->
+              </el-tab-pane>
               <el-tab-pane label="自定义" name="custorm">
-                <ul class="icon-list">
+                2222
+                <!-- <ul class="icon-list">
                   <li
                     v-for="(option, index) in item.options"
                     :key="index"
                     class="icon-item"
+                    @click="selectIcon(item, option)"
                   >
                     <span class="svg-icon">
                       <el-icon style="font-size: 20px">
@@ -247,7 +251,7 @@ defineExpose({ handleSubmit, handleClear })
                       </span>
                     </span>
                   </li>
-                </ul>
+                </ul> -->
               </el-tab-pane>
             </el-tabs>
           </el-popover>
