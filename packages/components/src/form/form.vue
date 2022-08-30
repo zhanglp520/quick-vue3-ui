@@ -4,6 +4,7 @@ import { Plus } from '@element-plus/icons-vue'
 import { FormInstance, TabsPaneContext } from 'element-plus'
 import { formProps, formEmits } from './types'
 import elementPlusIcons from './elementPlusIcons'
+import quickSvgIcon from '../svgIcon/svgIcon.vue'
 
 const props = defineProps(formProps)
 const { model, formInline, formItems, formType, actionSlot, hiddenAction } =
@@ -214,7 +215,6 @@ defineExpose({ handleSubmit, handleClear })
               @tab-click="handleClick"
             >
               <el-tab-pane label="element官方" name="element">
-                3333333
                 <ul class="icon-list">
                   <li
                     v-for="(option, index) in elementPlusIcons"
@@ -233,8 +233,7 @@ defineExpose({ handleSubmit, handleClear })
                   </li>
                 </ul>
               </el-tab-pane>
-              <el-tab-pane label="自定义" name="custorm">
-                4444444
+              <el-tab-pane label="iconfont自定义" name="custorm">
                 <ul class="icon-list">
                   <li
                     v-for="(option, index) in item.options"
@@ -244,7 +243,9 @@ defineExpose({ handleSubmit, handleClear })
                   >
                     <span class="svg-icon">
                       <el-icon style="font-size: 20px">
-                        <component :is="option.value" />
+                        <quick-svg-icon
+                          :icon-class="option.value"
+                        ></quick-svg-icon>
                       </el-icon>
                       <span style="margin-top: 8px">
                         {{ option.label }}

@@ -3,6 +3,7 @@ import { reactive } from 'vue'
 import { FormItem } from '@ainiteam/quick-vue3-ui'
 import { User } from '@/types/user'
 import custormIcons from './custormIcons.json'
+import '@/assets/svg/iconfont.js'
 
 const form = reactive<User>({
   id: '',
@@ -52,7 +53,6 @@ const formItems = reactive<Array<FormItem>>([
     options: custormIcons,
     width: '400px',
     select: (val) => {
-      debugger
       form.userName = val
     },
   },
