@@ -214,8 +214,8 @@ defineExpose({ handleSubmit, handleClear })
               @tab-click="handleClick"
             >
               <el-tab-pane label="element官方" name="element">
-                111111111
-                <!-- <ul class="icon-list">
+                3333333
+                <ul class="icon-list">
                   <li
                     v-for="(option, index) in elementPlusIcons"
                     :key="index"
@@ -231,11 +231,11 @@ defineExpose({ handleSubmit, handleClear })
                       </span>
                     </span>
                   </li>
-                </ul> -->
+                </ul>
               </el-tab-pane>
               <el-tab-pane label="自定义" name="custorm">
-                2222
-                <!-- <ul class="icon-list">
+                4444444
+                <ul class="icon-list">
                   <li
                     v-for="(option, index) in item.options"
                     :key="index"
@@ -251,7 +251,7 @@ defineExpose({ handleSubmit, handleClear })
                       </span>
                     </span>
                   </li>
-                </ul> -->
+                </ul>
               </el-tab-pane>
             </el-tabs>
           </el-popover>
