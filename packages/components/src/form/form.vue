@@ -3,6 +3,8 @@ import { defineExpose, defineProps, toRefs, defineEmits, ref } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
 import { FormInstance, TabsPaneContext } from 'element-plus'
 import { formProps, formEmits } from './types'
+import elementPlusIcons from './elementPlusIcons'
+import quickSvgIcon from '../svgIcon/svgIcon.vue'
 
 const props = defineProps(formProps)
 const { model, formInline, formItems, formType, actionSlot, hiddenAction } =
@@ -17,10 +19,10 @@ const activeName = ref('element')
 const handleClick = (tab: TabsPaneContext, event: Event) => {
   console.log(tab, event)
 }
-// const selectIcon = (item: any, option: any) => {
-//   item.select(option.value)
-//   iconVisible.value = false
-// }
+const selectIcon = (item: any, option: any) => {
+  item.select(option.value)
+  iconVisible.value = false
+}
 const iconClick = () => {
   iconVisible.value = true
 }
@@ -212,7 +214,7 @@ defineExpose({ handleSubmit, handleClear })
               class="demo-tabs"
               @tab-click="handleClick"
             >
-              <!-- <el-tab-pane label="element官方" name="element">
+              <el-tab-pane label="element官方" name="element">
                 <ul class="icon-list">
                   <li
                     v-for="(option, index) in elementPlusIcons"
@@ -230,17 +232,20 @@ defineExpose({ handleSubmit, handleClear })
                     </span>
                   </li>
                 </ul>
-              </el-tab-pane> -->
-              <el-tab-pane label="自定义" name="custorm">
+              </el-tab-pane>
+              <el-tab-pane label="iconfont自定义" name="custorm">
                 <ul class="icon-list">
                   <li
                     v-for="(option, index) in item.options"
                     :key="index"
                     class="icon-item"
+                    @click="selectIcon(item, option)"
                   >
                     <span class="svg-icon">
                       <el-icon style="font-size: 20px">
-                        <component :is="option.value" />
+                        <quick-svg-icon
+                          :icon-class="option.value"
+                        ></quick-svg-icon>
                       </el-icon>
                       <span style="margin-top: 8px">
                         {{ option.label }}
