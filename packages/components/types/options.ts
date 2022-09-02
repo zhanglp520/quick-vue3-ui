@@ -11,3 +11,7 @@ export interface TreeOptions {
 export interface SelectTreeOptions extends Options {
   children?: string
 }
+export interface IconOptions {
+  label?: string
+  data?: Array<Options>
+}

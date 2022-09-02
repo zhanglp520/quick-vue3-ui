@@ -1,4 +1,4 @@
-import { Options, Tree } from '#/index'
+import { Options, Tree, IconOptions } from '#/index'
 
 export interface FormTitle {
   add: string
@@ -14,6 +14,7 @@ export interface FormItem {
   type?: string
   autocomplete?: string
   options?: Options[]
+  iconOptions?: IconOptions[]
   treeOptions?: Tree[]
   addHidden?: boolean
   editHidden?: boolean
