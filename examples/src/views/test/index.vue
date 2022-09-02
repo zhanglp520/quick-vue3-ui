@@ -2,8 +2,8 @@
 import { reactive } from 'vue'
 import { FormItem } from '@ainiteam/quick-vue3-ui'
 import { User } from '@/types/user'
-import custormIcons from './custormIcons.json'
-import '@/assets/svg/iconfont.js'
+import '@/assets/iconfont/quickIconFont.js'
+import quickIconFont from '@/config/quickIconFont.json'
 
 const form = reactive<User>({
   id: '',
@@ -50,7 +50,12 @@ const formItems = reactive<Array<FormItem>>([
     placeholder: '菜单图标',
     prop: 'icon',
     type: 'icon',
-    options: custormIcons,
+    iconOptions: [
+      {
+        label: 'quick官网',
+        data: quickIconFont,
+      },
+    ],
     width: '400px',
     select: (val) => {
       form.userName = val

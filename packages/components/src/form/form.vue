@@ -214,7 +214,7 @@ defineExpose({ handleSubmit, handleClear })
               class="demo-tabs"
               @tab-click="handleClick"
             >
-              <el-tab-pane label="element官方" name="element">
+              <el-tab-pane label="element官方icon" name="element">
                 <ul class="icon-list">
                   <li
                     v-for="(option, index) in elementPlusIcons"
@@ -233,10 +233,15 @@ defineExpose({ handleSubmit, handleClear })
                   </li>
                 </ul>
               </el-tab-pane>
-              <el-tab-pane label="iconfont自定义" name="custorm">
+              <el-tab-pane
+                v-for="(iconItem, iconIndex) in item.iconOptions"
+                :key="iconIndex"
+                :label="iconItem.label"
+                name="custorm"
+              >
                 <ul class="icon-list">
                   <li
-                    v-for="(option, index) in item.options"
+                    v-for="(option, index) in iconItem.data"
                     :key="index"
                     class="icon-item"
                     @click="selectIcon(item, option)"
