@@ -1,7 +1,7 @@
 export default {
   base: '/',
   lang: 'en-US',
-  title: 'quick-vue3-ui-js',
+  title: 'quick-vue3-admin-js',
   titleTemplate: 'Vite & Vue powered static site generator',
   description: 'Vite & Vue powered static site generator.',
   appearance: true,
@@ -39,7 +39,7 @@ export default {
   },
   themeConfig: {
     logo: '/logo.ico',
-    siteTitle: 'quick-vue3-ui',
+    siteTitle: 'quick-vue3-admin',
     outlineTitle: 'In hac pagina',
     lastUpdatedText: 'Updated Date',
     docFooter: {
@@ -107,7 +107,7 @@ export default {
           text: '入门',
           items: [
             {
-              text: 'quick-vue3-admin是什么？',
+              text: '介绍',
               link: '/guide/introduction',
               items: [],
             },

@@ -1,5 +1,5 @@
-  ![donate](../public/logo.png)
-  
+![donate](../public/logo.png)
+
 ## 简介
 
 quick-vue3-admin 是一款免费开源快速搭建中后台系统框架。本框架基于 vite2、vue3、element-plus、pinia 等最新主流技术并封装了通用的组件方便开发者提高工作效率。后期也会通过版本升级的方式来维护并更新，使开发者拥有一款长期并且稳定的脚手架。本团队还提供了基于 quick 框架开发的各类业务项目，如有相关需求联系管理员。
@@ -26,17 +26,18 @@ quick-vue3-admin 是一款免费开源快速搭建中后台系统框架。本框
 演示账号密码：admin/123456
 
 ## 开发文档
-- [quick-vue3-template](https://doc.ainiteam.com/) - quick-vue3-admin开发文档
+
+- [quick-vue3-template](https://doc.ainiteam.com/) - quick-vue3-admin 开发文档
 
 ## 组件文档
-- [quick-vue3-template](https://template.ainiteam.com/) - quick-vue3-admin帮助文档
+
+- [quick-vue3-template](https://template.ainiteam.com/) - quick-vue3-admin 帮助文档
 
 账号密码：admin/123456
 
 ## 接口文档
 
-- [quick接口文档](https://console-docs.apipost.cn/preview/0e11a2eb3c3883a7/4fff7a394c074ac7) - quick接口文档
-
+- [quick 接口文档](https://console-docs.apipost.cn/preview/0e11a2eb3c3883a7/4fff7a394c074ac7) - quick 接口文档
 
 ## 安装使用
 
