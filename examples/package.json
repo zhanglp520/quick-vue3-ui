@@ -18,6 +18,10 @@
     "packages/**",
     "examples"
   ],
+  "engines": {
+    "node": "v18.12.1",
+    "pnpm": "7.18.0"
+  },
   "author": {
     "name": "zhanglp",
     "email": "zhanglp15229380174@163.com",
@@ -34,11 +38,10 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@ainiteam/quick-vue3-ui": "workspace:^1.0.1",
-    "vitepress": "^1.0.0-alpha.10"
+    "@ainiteam/quick-vue3-ui": "workspace:^",
+    "vitepress": "^1.0.0-alpha.30"
   },
   "dependencies": {
-    "element-plus": "^2.2.14",
     "highlight.js": "^11.6.0",
     "vue-highlightjs": "^1.3.3",
     "@highlightjs/vue-plugin": "^2.1.2"
