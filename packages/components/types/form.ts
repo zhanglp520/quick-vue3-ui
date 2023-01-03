@@ -26,7 +26,7 @@ export interface FormItem {
   editDisabled?: boolean
   detailDisabled?: boolean
   actionUrl?: string
-  imgUrl?: string
+  headers?: string
   prop?: string
   rules?: any
   width?: string

@@ -1,9 +1,31 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { FormItem } from '@ainiteam/quick-vue3-ui'
 import { User } from '@/types/user'
 import '@/assets/iconfont/quickIconFont.js'
 import quickIconFont from '@/config/quickIconFont.json'
+import { ElMessage } from 'element-plus'
+
+const imageUrl = ref('')
+const handleAvatarSuccess: UploadProps['onSuccess'] = (
+  response,
+  uploadFile
+) => {
+  debugger
+  imageUrl.value = URL.createObjectURL(uploadFile.raw!)
+  form.avatar=imageUrl.value
+}
+const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
+  if (rawFile.type !== 'image/jpeg') {
+    ElMessage.error('Avatar picture must be JPG format!')
+    return false
+  }
+  if (rawFile.size / 1024 / 1024 > 2) {
+    ElMessage.error('Avatar picture size can not exceed 2MB!')
+    return false
+  }
+  return true
+}
 
 const form = reactive<User>({
   id: '',
@@ -11,6 +33,19 @@ const form = reactive<User>({
   userName: '',
 })
 const formItems = reactive<Array<FormItem>>([
+  {
+    label: '头像',
+    labelWidth: '80px',
+    vModel: 'avatar',
+    placeholder: '头像',
+    type: 'avatar',
+    actionUrl: 'https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15',
+    // headers:{
+    //   // authorization: `Bearer ${this.$store.getters.token}`,
+    // },
+    success: handleAvatarSuccess,
+    beforeUpload: beforeAvatarUpload,
+  },
   {
     label: '姓名',
     labelWidth: '80px',
