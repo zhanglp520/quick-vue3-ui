@@ -25,7 +25,8 @@
     "build": "vite build",
     "lint": "eslint --ext .js,ts,.vue,types, src",
     "lint-fix": "eslint --ext .js,ts,.vue,types, src --fix",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "publish": "pnpm publish"
   },
   "keywords": [
     "quick-vue3-ui",

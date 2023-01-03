@@ -16,6 +16,7 @@
     "lint:utils": "pnpm -F @ainiteam/utils lint",
     "lint-fix:utils": "pnpm -F @ainiteam/utils lint-fix",
     "build:ui": "pnpm -F @ainiteam/quick-vue3-ui build",
+    "publish:ui": "pnpm -F @ainiteam/quick-vue3-ui publish",
     "lint:ui": "pnpm -F @ainiteam/quick-vue3-ui lint",
     "lint-fix:ui": "pnpm -F @ainiteam/quick-vue3-ui lint-fix",
     "preinstall": "npx only-allow pnpm"
