@@ -59,6 +59,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@ainiteam/utils": "^1.0.3"
+    "@ainiteam/utils": "workspace:*"
   }
 }

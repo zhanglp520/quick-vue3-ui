@@ -2,7 +2,7 @@
 import { reactive, ref } from 'vue'
 
 const dialogVisible = ref(false)
-const action = 'https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15'
+const action = 'http://localhost:3000/api/v2/system/users/upload'
 const headers = reactive({
   // authorization: `Bearer ${this.$store.getters.token}`,
 })

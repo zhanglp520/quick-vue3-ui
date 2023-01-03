@@ -46,27 +46,27 @@ const cancelUpload = () => {
 }
 const clearFiles = () => {}
 const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
-  fileList.value = fileList.value.slice(-3)
+  console.log('handleChange')
 }
 
 const handleBeforeUpload: UploadProps['beforeUpload'] = (
   rawFile: UploadRawFile
 ) => {
-  console.log('上传前')
+  console.log('beforeUpload')
 }
 const handleSuccess: UploadProps['onSuccess'] = (
   response: any,
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
-  console.log('上传成功')
+  console.log('onSuccess')
 }
 const handleError: UploadProps['onError'] = (
   error: Error,
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
-  console.log('上传失败')
+  console.log('onError')
 }
 
 const handleClose = () => {
@@ -82,6 +82,7 @@ const handleClose = () => {
   >
     <el-upload
       ref="uploadRef"
+      v-model:file-list="fileList"
       class="upload-demo"
       :action="action"
       :headers="headers"
