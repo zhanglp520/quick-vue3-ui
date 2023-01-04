@@ -1,6 +1,5 @@
 <script lang="ts" setup name="QuickCrud">
 import {
-  defineProps,
   toRefs,
   reactive,
   ref,
