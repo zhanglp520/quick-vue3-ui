@@ -52,21 +52,31 @@ const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
 const handleBeforeUpload: UploadProps['beforeUpload'] = (
   rawFile: UploadRawFile
 ) => {
-  console.log('beforeUpload')
+  emits('onBeforeUpload',{
+    rawFile
+  })
 }
 const handleSuccess: UploadProps['onSuccess'] = (
   response: any,
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
-  console.log('onSuccess')
+  emits('onSuccess',{
+    response,
+    uploadFile,
+    uploadFiles
+  })
 }
 const handleError: UploadProps['onError'] = (
   error: Error,
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
-  console.log('onError')
+  emits('onError',{
+    error,
+    uploadFile,
+    uploadFiles
+  })
 }
 
 const handleClose = () => {

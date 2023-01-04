@@ -1,4 +1,5 @@
 import { ExtractPropTypes } from 'vue'
+import {Headers} from '#/headers'
 
 export const uploadProps = {
   dialogVisible: {
@@ -9,11 +10,11 @@ export const uploadProps = {
     type: String,
   },
   headers: {
-    type: [Boolean, Object],
+    type: [Boolean, Headers],
     default: false,
   },
 }
 
-export const uploadEmits = ['onClose']
+export const uploadEmits = ['onClose','onSuccess','onBeforeUpload','onError']
 export type UploadProps = ExtractPropTypes<typeof uploadProps>
 export type UploadEmits = ExtractPropTypes<typeof uploadEmits>

@@ -1,4 +1,5 @@
 import { Options, Tree, IconOptions } from '#/index'
+import {Headers} from '#/headers'
 
 export interface FormTitle {
   add: string
@@ -26,7 +27,7 @@ export interface FormItem {
   editDisabled?: boolean
   detailDisabled?: boolean
   actionUrl?: string
-  headers?: string
+  headers?: Headers
   prop?: string
   rules?: any
   width?: string
