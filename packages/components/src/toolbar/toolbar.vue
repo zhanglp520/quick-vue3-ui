@@ -1,5 +1,5 @@
 <script lang="ts" setup name="QuickToolbar">
-import { defineProps, defineEmits, toRefs } from 'vue'
+import { defineEmits, toRefs } from 'vue'
 import { toolbarProps, toolbarEmits, Toolbar } from './types'
 
 const props = defineProps(toolbarProps)

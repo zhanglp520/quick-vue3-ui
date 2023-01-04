@@ -1,5 +1,5 @@
 <script lang="ts" setup name="QuickSearch">
-import { defineProps, defineEmits, toRefs } from 'vue'
+import { defineEmits, toRefs } from 'vue'
 import { searchProps, searchEmits } from './types'
 
 const props = defineProps(searchProps)

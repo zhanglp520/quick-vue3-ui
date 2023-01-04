@@ -1,5 +1,5 @@
 <script lang="ts" setup name="QuickForm">
-import { defineExpose, defineProps, toRefs, defineEmits, ref } from 'vue'
+import { defineExpose,toRefs, defineEmits, ref } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
 import { FormInstance, TabsPaneContext } from 'element-plus'
 import { formProps, formEmits } from './types'

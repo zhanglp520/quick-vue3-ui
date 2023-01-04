@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps, toRefs, ref, Ref, watch } from 'vue'
+import { toRefs, Ref } from 'vue'
 
 const props = defineProps({
   code: {

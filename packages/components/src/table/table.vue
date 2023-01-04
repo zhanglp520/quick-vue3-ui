@@ -1,5 +1,5 @@
 <script lang="ts" setup name="QuickTable">
-import { defineProps, defineEmits, toRefs, ref, onMounted, nextTick } from 'vue'
+import { defineEmits, toRefs, ref, onMounted, nextTick } from 'vue'
 import { ElTable } from 'element-plus'
 import { tableProps, tableEmits, Actionbar } from './types'
 

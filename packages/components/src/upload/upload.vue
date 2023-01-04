@@ -8,7 +8,7 @@ import {
   UploadUserFile,
 } from 'element-plus'
 import { UploadFilled } from '@element-plus/icons-vue'
-import { defineProps, defineEmits, toRefs, ref } from 'vue'
+import { defineEmits, toRefs, ref } from 'vue'
 import { uploadProps, uploadEmits } from './types'
 
 const props = defineProps(uploadProps)
