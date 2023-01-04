@@ -138,7 +138,11 @@ defineExpose({ handleSubmit, handleClear })
             :before-upload="item.beforeUpload"
             :style="{ width: formInline ? '400px' : '100%' }"
           >
-            <img v-if="model[item.vModel]" :src="model[item.vModel]" class="avatar" />
+            <img
+              v-if="model[item.vModel]"
+              :src="model[item.vModel]"
+              class="avatar"
+            />
             <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
           </el-upload>
         </template>

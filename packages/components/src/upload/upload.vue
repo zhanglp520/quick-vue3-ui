@@ -44,7 +44,7 @@ const cancelUpload = () => {
   })
   emits('onClose')
 }
-const clearFiles = () => {}
+// const clearFiles = () => {}
 const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
   console.log('handleChange')
 }
@@ -52,8 +52,8 @@ const handleChange: UploadProps['onChange'] = (uploadFile, uploadFiles) => {
 const handleBeforeUpload: UploadProps['beforeUpload'] = (
   rawFile: UploadRawFile
 ) => {
-  emits('onBeforeUpload',{
-    rawFile
+  emits('onBeforeUpload', {
+    rawFile,
   })
 }
 const handleSuccess: UploadProps['onSuccess'] = (
@@ -61,15 +61,15 @@ const handleSuccess: UploadProps['onSuccess'] = (
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
-  console.log('upload-onSuccess',{
+  console.log('upload-onSuccess', {
     response,
     uploadFile,
-    uploadFiles
-  });  
-  emits('onSuccess',{
+    uploadFiles,
+  })
+  emits('onSuccess', {
     response,
     uploadFile,
-    uploadFiles
+    uploadFiles,
   })
 }
 const handleError: UploadProps['onError'] = (
@@ -77,10 +77,10 @@ const handleError: UploadProps['onError'] = (
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
-  emits('onError',{
+  emits('onError', {
     error,
     uploadFile,
-    uploadFiles
+    uploadFiles,
   })
 }
 
