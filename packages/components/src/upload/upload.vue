@@ -61,6 +61,11 @@ const handleSuccess: UploadProps['onSuccess'] = (
   uploadFile: UploadFile,
   uploadFiles: UploadFiles
 ) => {
+  console.log('upload-onSuccess',{
+    response,
+    uploadFile,
+    uploadFiles
+  });  
   emits('onSuccess',{
     response,
     uploadFile,
