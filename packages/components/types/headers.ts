@@ -1,3 +1,3 @@
-export interface UploadHeaders{
-    authorization:string
-  }
+export interface UploadHeaders {
+  authorization: string
+}
